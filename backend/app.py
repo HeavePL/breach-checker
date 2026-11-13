@@ -19,6 +19,9 @@ def load_hashes():
 # Wczytanie raz, przy starcie - sprawdzenie w zbiorze (set) trwa O(1)
 KNOWN_HASHES = load_hashes()
 print(f"Wczytano {len(KNOWN_HASHES)} hashy z {HASHES_FILE}", flush=True)
+@app.get("/health")
+def health():
+    return jsonify("status", "ok")
 
 
 @app.post("/check")
