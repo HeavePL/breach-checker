@@ -2,6 +2,7 @@
 CREATE TABLE leaked_hashes (
     hash CHAR(40) PRIMARY KEY      -- skrót SHA-1, nigdy hasło jawne
 );
+ 
 
 -- Tabela pomocnicza: plik może mieć końce linii z Windows (\r) i puste linie
 CREATE TEMP TABLE import (line TEXT);
